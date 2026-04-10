@@ -138,3 +138,10 @@ Desenvolvido por:
 - [alura-cursos](https://github.com/alura-cursos)
 - [cicatrizdev](https://github.com/cicatrizdev)
 - [git-jr](https://github.com/git-jr)
+
+
+### Mapeando todas as branchs após git clone
+```
+git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+
+```
